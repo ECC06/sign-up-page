@@ -43,15 +43,6 @@
         #check {
             display: none;
         }
-
-        #check:checked~.locked-icon,
-        .unlocked-icon {
-            display: none;
-        }
-
-        #check:checked~.unlocked-icon {
-            display: inline;
-        }
     </style>
 </head>
 
@@ -83,7 +74,7 @@
                             <input type="password" id="create-pswd" placeholder="Create password">
                             <input type="checkbox" id="check">
                             <label class="locked-icon" for="check">🔒</label>
-                            <label class="unlocked-icon" for="check">🔓</label>
+                            <label class="unlocked-icon hidden" for="check">🔓</label>
                         </div>
 
 
