@@ -40,7 +40,7 @@
             width: 100%;
         }
 
-        #check {
+        input[type="checkbox"] {
             display: none;
         }
     </style>
@@ -57,6 +57,7 @@
 
             <form action="">
                 <fieldset>
+
                     <div>
                         <label for="first-name" class="hidden">First Name</label>
                         <input type="text" id="first-name" placeholder="First Name" maxlength="15">
@@ -72,13 +73,13 @@
                         <label for="create-pswd" class="hidden">Create password</label>
                         <div>
                             <input type="password" id="create-pswd" placeholder="Create password">
-                            <input type="checkbox" id="check">
-                            <label class="locked-icon" for="check">🔒</label>
-                            <label class="unlocked-icon hidden" for="check">🔓</label>
+                            <input type="checkbox" id="check1">
+                            <label class="locked-icon" for="check1">🔒</label>
+                            <label class="unlocked-icon hidden" for="check1">🔓</label>
                         </div>
 
 
-                        <ul id="create-pswd-options" class="hidden">
+                        <ul id="create-pswd-criteria" class="hidden">
                             <li class="red confirm-length">At least <strong>8</strong> characters</li>
                             <li class="red confirm-uppercase">At least <strong>one</strong> uppercase letter</li>
                             <li class="red confirm-special-char">At least <strong>one</strong> special character</li>
@@ -87,9 +88,15 @@
 
                     <div>
                         <label for="confirm-pswd" class="hidden">Confirm password</label>
-                        <input type="password" id="confirm-pswd" placeholder="Confirm password">
+                        <div>
+                            <input type="password" id="confirm-pswd" placeholder="Confirm password">
+                            <input type="checkbox" id="check2">
+                            <label class="locked-icon" for="check2">🔒</label>
+                            <label class="unlocked-icon hidden" for="check2">🔓</label>
+                        </div>
 
-                        <p class="hidden">Passwords don't match</p>
+
+                        <p class="red confirm-match hidden">Passwords <span>don't</span> match</p>
                     </div>
 
                     <button type="submit">Sign Up</button>
