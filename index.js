@@ -1,14 +1,22 @@
 const createPswdInput = document.querySelector("#create-pswd");
 const options = document.querySelector("#create-pswd-options");
+const checkbox = document.querySelector("#check");
 
+//displays the password confirmation text when the user tries to set a password
 createPswdInput.addEventListener("focus", function (e) {
     options.classList.remove("hidden");
 });
 
+//displays the password confirmation text when the user focuses out of setting a password
 createPswdInput.addEventListener("blur", function (e) {
     // options.classList.add("hidden");
 });
 
+checkbox.addEventListener("change", function (e) {
+    (this.checked) ? createPswdInput.type = "text" : createPswdInput.type = "password";
+});
+
+// visually indicates to the user if the criteria for setting a password is being met
 createPswdInput.addEventListener("input", function (e) {
     const userInput = createPswdInput.value.trim();
 
@@ -37,3 +45,6 @@ createPswdInput.addEventListener("input", function (e) {
     }
 
 });
+
+
+

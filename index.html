@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up page</title>
     <script defer src="./index.js"></script>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <style>
         .hidden {
             display: none;
@@ -38,6 +39,19 @@
         fieldset>div:first-child>* {
             width: 100%;
         }
+
+        #check {
+            display: none;
+        }
+
+        #check:checked~.locked-icon,
+        .unlocked-icon {
+            display: none;
+        }
+
+        #check:checked~.unlocked-icon {
+            display: inline;
+        }
     </style>
 </head>
 
@@ -65,7 +79,13 @@
 
                     <div>
                         <label for="create-pswd" class="hidden">Create password</label>
-                        <input type="password" id="create-pswd" placeholder="Create password">
+                        <div>
+                            <input type="password" id="create-pswd" placeholder="Create password">
+                            <input type="checkbox" id="check">
+                            <label class="locked-icon" for="check">🔒</label>
+                            <label class="unlocked-icon" for="check">🔓</label>
+                        </div>
+
 
                         <ul id="create-pswd-options" class="hidden">
                             <li class="red confirm-length">At least <strong>8</strong> characters</li>
