@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up page</title>
+    <script defer src="./index.js"></script>
+    <style>
+        .hidden {
+            display: none;
+        }
+
+        .red {
+            color: red;
+        }
+
+        .green {
+            color: green;
+        }
+
+
+        img:first-of-type {
+            display: none;
+        }
+
+        fieldset {
+            display: grid;
+            gap: 20px;
+            width: 500px;
+        }
+
+        fieldset>div:first-child {
+            display: flex;
+            gap: 24px;
+        }
+
+        fieldset>div:first-child>* {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="./images-and-icons/gym-image.png" alt="image of body boost gym">
+
+        <div>
+            <img src="./images-and-icons/logo.png" alt="logo">
+
+            <h1>Join our Gym!</h1>
+
+            <form action="">
+                <fieldset>
+                    <div>
+                        <label for="first-name" class="hidden">First Name</label>
+                        <input type="text" id="first-name" placeholder="First Name" maxlength="15">
+
+                        <label for="last-name" class="hidden">Last Name</label>
+                        <input type="text" id="last-name" placeholder="Last Name" maxlength="15">
+                    </div>
+
+                    <label for="phone-number" class="hidden">Phone Number</label>
+                    <input type="tel" id="phone-number" placeholder="Phone Number">
+
+                    <div>
+                        <label for="create-pswd" class="hidden">Create password</label>
+                        <input type="password" id="create-pswd" placeholder="Create password">
+
+                        <ul id="create-pswd-options" class="hidden">
+                            <li class="red confirm-length">At least <strong>8</strong> characters</li>
+                            <li class="red confirm-uppercase">At least <strong>one</strong> uppercase letter</li>
+                            <li class="red confirm-special-char">At least <strong>one</strong> special character</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <label for="confirm-pswd" class="hidden">Confirm password</label>
+                        <input type="password" id="confirm-pswd" placeholder="Confirm password">
+
+                        <p class="hidden">Passwords don't match</p>
+                    </div>
+
+                    <button type="submit">Sign Up</button>
+
+
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
