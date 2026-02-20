@@ -27,6 +27,8 @@ let phoneNumberCorrect = false;
 //displays the confirmation text when the user focuses on the input element
 createPasswordInput.addEventListener("focus", (e) => {
     createPasswordCriteria.classList.remove("hidden");
+
+    turnBordersRed();
 });
 
 confirmPasswordInput.addEventListener("focus", function (e) {
@@ -126,6 +128,13 @@ confirmPasswordInput.addEventListener("input", function (e) {
         confirmMatch.classList.add("red");
         confirmMatch.classList.remove("green");
         dontText.classList.remove("hidden");
+
+        function turnBordersRed() {
+            createPasswordInput.style.outline = "1.5px solid var(--error-red)";
+            confirmPasswordInput.style.outline = "1.5px solid var(--error-red)";
+        }
+
+        turnBordersRed();
     }
 });
 
