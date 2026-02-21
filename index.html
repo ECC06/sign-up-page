@@ -11,14 +11,13 @@
 </head>
 
 <body>
-    <img class="mobile logo" src="./images-and-icons/logo.png" alt="logo">
+    <img class="logo" src="./images-and-icons/logo.png" alt="logo">
 
-    <div id="wrapper">
+    <div class="wrapper">
         <img id="gym-image" src="./images-and-icons/gym-image.png" alt="body boost gym">
 
         <!-- heading and form -->
-        <div id="heading-and-form">
-            <img class="desktop logo" src="./images-and-icons/logo.png" alt="logo">
+        <article id="heading-and-form">
 
             <h1>Join our Gym!</h1>
 
@@ -28,14 +27,17 @@
                     <!-- first and last name fields -->
                     <div id="name-fields">
                         <label for="first-name" class="hidden">First Name</label>
-                        <input type="text" id="first-name" class="form-field" placeholder="First Name" maxlength="15" required>
+                        <input type="text" id="first-name" class="form-field" placeholder="First Name" maxlength="15"
+                            required>
 
                         <label for="last-name" class="hidden">Last Name</label>
-                        <input type="text" id="last-name" class="form-field" placeholder="Last Name" maxlength="15" required>
+                        <input type="text" id="last-name" class="form-field" placeholder="Last Name" maxlength="15"
+                            required>
                     </div>
 
                     <label for="phone-number" class="hidden">Phone Number</label>
-                    <input type="tel" id="phone-number" class="form-field" placeholder="Phone Number" inputmode="numeric" required>
+                    <input type="tel" id="phone-number" class="form-field" placeholder="Phone Number"
+                        inputmode="numeric" required>
 
                     <label for="email" class="hidden">Email</label>
                     <input type="email" id="email" class="form-field" placeholder="Email" required>
@@ -46,7 +48,8 @@
 
                         <!-- input textbox and icon -->
                         <div class="input-and-icon">
-                            <input type="password" id="create-pswd" class="form-field" placeholder="Create password" required>
+                            <input type="password" id="create-pswd" class="form-field" placeholder="Create password"
+                                required>
 
                             <input type="checkbox" id="check1">
 
@@ -69,7 +72,7 @@
 
                             <label class="eye-icon opened hidden" for="check1">
                                 <!-- eye opened icon -->
-                                <svg  width="22" height="18" viewBox="0 0 22 18" fill="none"
+                                <svg width="22" height="18" viewBox="0 0 22 18" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <title>I'm an opened eye</title>
                                     <path opacity="0.2" fill-rule="evenodd" clip-rule="evenodd"
@@ -88,8 +91,10 @@
 
                         <ul class="create-pswd-criteria hidden">
                             <li class="confirm-li red confirm-length">At least <strong>8</strong> characters</li>
-                            <li class="confirm-li red confirm-uppercase">At least <strong>one</strong> uppercase letter</li>
-                            <li class="confirm-li red confirm-special-char">At least <strong>one</strong> special character</li>
+                            <li class="confirm-li red confirm-uppercase">At least <strong>one</strong> uppercase letter
+                            </li>
+                            <li class="confirm-li red confirm-special-char">At least <strong>one</strong> special
+                                character</li>
                         </ul>
                     </div>
 
@@ -99,7 +104,8 @@
 
                         <!-- input textbox and icon -->
                         <div class="input-and-icon">
-                            <input type="password" id="confirm-pswd" class="form-field" placeholder="Confirm password" required>
+                            <input type="password" id="confirm-pswd" class="form-field" placeholder="Confirm password"
+                                required>
 
                             <input type="checkbox" id="check2">
 
@@ -150,11 +156,24 @@
 
                 </div>
             </form>
-        </div>
+        </article>
+
+        <article class="signed-up-cont hidden">
+            <svg width="213" height="213" viewBox="0 0 213 213" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="213" height="213" rx="106.5" fill="#FF8400" />
+                <path
+                    d="M130.045 106.675L162.339 78.7523V134.279L130.045 106.675ZM88.4314 111.404L99.7718 121.201C101.552 122.706 103.872 123.615 106.408 123.615H106.497H106.566C109.107 123.615 111.427 122.7 113.228 121.185L113.212 121.195L124.553 111.398L159.026 140.863H53.9742L88.4314 111.404ZM53.9269 72.1322H159.089L108.576 115.793C108.011 116.244 107.306 116.488 106.581 116.482H106.508H106.44C105.712 116.488 105.005 116.242 104.439 115.788L104.445 115.793L53.9269 72.1322ZM50.6665 78.7471L82.9554 106.67L50.6665 134.258V78.7471ZM164.071 65.9928C162.811 65.3658 161.331 65 159.761 65H53.2602C51.7391 65.006 50.2396 65.3581 48.8762 66.0293L48.934 66.0032C47.3057 66.8052 45.9345 68.0433 44.9745 69.5783C44.0146 71.1133 43.5039 72.8844 43.5 74.6925V138.292C43.5028 140.866 44.5314 143.333 46.3602 145.153C48.189 146.974 50.6686 147.997 53.2549 148H159.745C162.331 147.997 164.811 146.974 166.64 145.153C168.469 143.333 169.497 140.866 169.5 138.292V74.6925C169.5 70.8939 167.3 67.6021 164.098 66.0189L164.04 65.9928H164.071Z"
+                    fill="#FFFAF4" />
+            </svg>
+
+            <h1>All signed up!</h1>
+
+            <p>
+                Thank you for signing up to Body Boost. A confirmation email has been sent to your email inbox.
+            </p>
+
+        </article>
     </div>
-
-
-
 
 </body>
 

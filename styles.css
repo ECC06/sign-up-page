@@ -86,7 +86,7 @@ input:not(input[type="checkbox"]) {
 	color: var(--lighter-black);
 }
 
-input[type="checkbox"], .mobile.logo {
+input[type="checkbox"], .logo {
 	display: none;
 }
 
@@ -95,7 +95,7 @@ input[type="checkbox"], .mobile.logo {
     width: 70px;
 }
 
-#wrapper {
+.wrapper {
 	display: flex;
 	align-items: center;
 	column-gap: 36px;
@@ -103,18 +103,12 @@ input[type="checkbox"], .mobile.logo {
     
 }
 
-#wrapper > * {
+.wrapper > * {
 	width: 50%;
 }
 
 #heading-and-form {
 	position: relative;
-}
-
-.desktop.logo {
-	position: absolute;
-	top: -50px;
-	right: 0;
 }
 
 h1 {
@@ -219,6 +213,20 @@ div.input-and-icon {
 	color: var(--lighter-black);
 }
 
+.signed-up-cont {
+    display: grid;
+    gap: 20px;
+    text-align: center;
+    justify-items: center;
+    width: 100%;
+}
+
+.signed-up-cont p {
+    font-size: 20px;
+        width: 500px;
+
+}
+
 /* !UTILITY CLASSES */
 .hidden {
 	display: none;
@@ -232,12 +240,17 @@ div.input-and-icon {
 	color: var(--accepted-green);
 }
 
+.form-hidden {
+    flex-direction: column;
+    width: fit-content;
+}
+
 @media (max-width: 1023px) {
 	#gym-image {
 		display: none;
 	}
 
-	#wrapper {
+	.wrapper {
 		width: min(90%, 600px);
 		flex-direction: column;
 	}
@@ -250,15 +263,17 @@ div.input-and-icon {
         text-align: center;
     }
 
-    .desktop.logo {
-        display: none;
+}
+
+@media (max-width: 767px) {
+    .signed-up-cont h1 {
+        font-size: 36px;
     }
 
-    .mobile.logo {
-        display: block;
-        width: 70px;
-        top: 20px;
-        left: 20px;
+    .signed-up-cont p {
+        font-size: 16px;
+        min-width: 280px;
+        width: 65%;
     }
 }
 
@@ -266,5 +281,7 @@ div.input-and-icon {
     h1 {
         font-size: 40px;
     }
+
+
 
 }

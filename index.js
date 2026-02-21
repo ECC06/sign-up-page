@@ -1,4 +1,8 @@
+const wrapper = document.querySelector(".wrapper");
+const headingAndForm = document.querySelector("#heading-and-form");
 const form = document.querySelector("form");
+
+const gymImage = document.querySelector("#gym-image");
 
 const phoneInput = document.querySelector("#phone-number");
 
@@ -18,6 +22,8 @@ const confirmSpecialCharElem = document.querySelector(".confirm-special-char");
 
 const [closedEye1, closedEye2] = document.querySelectorAll(".eye-icon.closed");
 const [openedEye1, openedEye2] = document.querySelectorAll(".eye-icon.opened");
+
+const signedUpCont = document.querySelector(".signed-up-cont");
 
 let initialPswd = null;
 let passwordSecure = false;
@@ -143,7 +149,7 @@ form.addEventListener("submit", function (e) {
     checkPhoneNumber();
 
     if (passwordsIdentical && passwordSecure && phoneNumberCorrect) {
-        alert("Now, check your email for a link to the payment portal");
+        showEmailMsg();
     } else {
         alert("Please, check that your password input meets the criteria");
     }
@@ -155,5 +161,12 @@ form.addEventListener("submit", function (e) {
         if (numberRegex.test(phoneInput.value)) {
             phoneNumberCorrect = true;
         }
+    }
+
+    function showEmailMsg() {
+        wrapper.classList.add("form-hidden");
+        gymImage.classList.add("hidden");
+        headingAndForm.classList.add("hidden");
+        signedUpCont.classList.remove("hidden");
     }
 });
